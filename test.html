@@ -223,6 +223,7 @@
         function run() {
             for (var z = 0; z < 100; z++) {
                 document.getElementById("c" + z).style.backgroundColor = "";
+                document.getElementById("i" + ib).innerHTML = "";
             }
             var nums = [];
             for (var i = 0; i <= 99; i++) {
@@ -241,9 +242,11 @@
                 var ib = r_num[b];
                 if (ib == m) {
                     document.getElementById("c" + b).style.backgroundColor = "red";
+                    document.getElementById("i" + ib).innerHTML = ib;
                     c = b;
                 } else {
                     document.getElementById("c" + b).style.backgroundColor = "green";
+                    document.getElementById("i" + ib).innerHTML = ib;
                 }
                 var b = ib;
                 i++
@@ -263,6 +266,7 @@
                 document.getElementById("num2").innerHTML = `Box count: ${i}`;
                 document.getElementById("num3").innerHTML = `Last box: ${c}`;
                 document.getElementById("num1").innerHTML = `Start box: ${m}`;
+                document.getElementById("i" + ib).innerHTML = "";
             }
         }
     </script>
