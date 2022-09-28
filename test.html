@@ -39,7 +39,7 @@
         width: 50px;
         height: 30px;
         border: 2px solid black;
-        top: 600px;
+        top: 577px;
         position: absolute;
         cursor: pointer;
         margin-right: 515px;
@@ -51,7 +51,7 @@
         height: 30px;
         border: 2px solid black;
         position: absolute;
-        top: 600px;
+        top: 577px;
         margin-right: 400px;
 
         cursor: pointer;
@@ -61,21 +61,21 @@
 
     #num1 {
         position: absolute;
-        top: 603px;
+        top: 580px;
         font-size: 20px;
         margin: 0px 210px 0px 0px;
     }
 
     #num2 {
         position: absolute;
-        top: 603px;
+        top: 580px;
         font-size: 20px;
         margin: 0px 0px 0px 420px;
     }
 
     #num3 {
         position: absolute;
-        top: 603px;
+        top: 580px;
         font-size: 20px;
         margin: 0px 0px 0px 100px;
 
@@ -230,6 +230,7 @@
             var ib = 0;
             i = 0;
             document.getElementById("num1").innerHTML = `Start box: ${m}`;
+            function rset() {
                 var ib = r_num[b];
                 if (ib == m) {
                     document.getElementById("c" + b).style.backgroundColor = "red";
@@ -239,23 +240,10 @@
                 }
                 var b = ib;
                 i++
-            
+            }
             document.getElementById("c" + m).style.backgroundColor = "red";
             document.getElementById("num2").innerHTML = `Box count: ${i}`;
             document.getElementById("num3").innerHTML = `Last box: ${c}`;
-        }
-    </script>
-    <script>
-        function rset() {
-            for (var q = 0; q < 100; q++) {
-                document.getElementById("c" + q).style.backgroundColor = "";
-                i = 0;
-                c = 0;
-                m = 0;
-                document.getElementById("num2").innerHTML = `Box count: ${i}`;
-                document.getElementById("num3").innerHTML = `Last box: ${c}`;
-                document.getElementById("num1").innerHTML = `Start box: ${m}`;
-            }
         }
     </script>
 </body>
