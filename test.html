@@ -223,7 +223,6 @@
         function run() {
             for (var z = 0; z < 100; z++) {
                 document.getElementById("c" + z).style.backgroundColor = "";
-                document.getElementById("i" + z).innerHTML = "";
             }
             var nums = [];
             for (var i = 0; i <= 99; i++) {
@@ -242,11 +241,11 @@
                 var ib = r_num[b];
                 if (ib == m) {
                     document.getElementById("c" + b).style.backgroundColor = "red";
-                    document.getElementById("i" + b).innerHTML = ib;
+                    document.getElementById("i" + b).innerHTML = "1";
                     c = b;
                 } else {
                     document.getElementById("c" + b).style.backgroundColor = "green";
-                    document.getElementById("i" + b).innerHTML = ib;
+                    document.getElementById("i" + b).innerHTML = "2";
                 }
                 var b = ib;
                 i++
