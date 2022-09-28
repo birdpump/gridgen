@@ -229,10 +229,9 @@
             var b = m;
             var ib = 0;
             i = 0;
-            
             document.getElementById("num1").innerHTML = `Start box: ${m}`;
-            }
-            function rset() {
+            
+            function rset(){
                 var ib = r_num[b];
                 if (ib == m) {
                     document.getElementById("c" + b).style.backgroundColor = "red";
@@ -242,11 +241,11 @@
                 }
                 var b = ib;
                 i++
-            
+            }
             document.getElementById("c" + m).style.backgroundColor = "red";
             document.getElementById("num2").innerHTML = `Box count: ${i}`;
             document.getElementById("num3").innerHTML = `Last box: ${c}`;
-            }
+        }
     </script>
 </body>
 
