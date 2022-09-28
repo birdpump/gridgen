@@ -80,13 +80,18 @@
         margin: 0px 0px 0px 100px;
 
     }
+    
+    h2{
+        position: relative;
+        
+    }
 </style>
 
 <body>
     <div id="box">
         <table>
             <tr>
-                <td id="c0">0</td>
+                <td id="c0">0<h2 id="i0">0</h2></td>
                 <td id="c1">1</td>
                 <td id="c2">2</td>
                 <td id="c3">3</td>
@@ -230,8 +235,7 @@
             var ib = 0;
             i = 0;
             document.getElementById("num1").innerHTML = `Start box: ${m}`;
-            }
-            function rset(){
+            while (ib != m) {
                 var ib = r_num[b];
                 if (ib == m) {
                     document.getElementById("c" + b).style.backgroundColor = "red";
@@ -241,10 +245,23 @@
                 }
                 var b = ib;
                 i++
-       
+            }
             document.getElementById("c" + m).style.backgroundColor = "red";
             document.getElementById("num2").innerHTML = `Box count: ${i}`;
             document.getElementById("num3").innerHTML = `Last box: ${c}`;
+        }
+    </script>
+    <script>
+        function rset() {
+            for (var q = 0; q < 100; q++) {
+                document.getElementById("c" + q).style.backgroundColor = "";
+                i = 0;
+                c = 0;
+                m = 0;
+                document.getElementById("num2").innerHTML = `Box count: ${i}`;
+                document.getElementById("num3").innerHTML = `Last box: ${c}`;
+                document.getElementById("num1").innerHTML = `Start box: ${m}`;
+            }
         }
     </script>
 </body>
